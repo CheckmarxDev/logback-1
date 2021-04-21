@@ -59,7 +59,8 @@ public class ContextSelectorStaticBinder {
             throw new IllegalAccessException("Only certain classes can access this method.");
         }
 
-        String contextSelectorStr = OptionHelper.getSystemProperty(ClassicConstants.LOGBACK_CONTEXT_SELECTOR);
+        // Setting to null to avoid catching a customer's selector, which will not work with our repackaged logback
+        String contextSelectorStr = null;// OptionHelper.getSystemProperty(ClassicConstants.LOGBACK_CONTEXT_SELECTOR);
         if (contextSelectorStr == null) {
             contextSelector = new DefaultContextSelector(defaultLoggerContext);
         } else if (contextSelectorStr.equals("JNDI")) {

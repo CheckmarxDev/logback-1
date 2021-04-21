@@ -44,10 +44,10 @@ import ch.qos.logback.core.util.StatusListenerConfigHelper;
  */
 public class ContextInitializer {
 
-    final public static String GROOVY_AUTOCONFIG_FILE = "logback.groovy";
-    final public static String AUTOCONFIG_FILE = "logback.xml";
-    final public static String TEST_AUTOCONFIG_FILE = "logback-test.xml";
-    final public static String CONFIG_FILE_PROPERTY = "logback.configurationFile";
+    final public static String GROOVY_AUTOCONFIG_FILE = "checkmarx-logback.groovy";
+    final public static String AUTOCONFIG_FILE = "checkmarx-logback.xml";
+    final public static String TEST_AUTOCONFIG_FILE = "checkmarx-logback-test.xml";
+    final public static String CONFIG_FILE_PROPERTY = "checkmarx-logback.configurationFile";
 
     final LoggerContext loggerContext;
 
